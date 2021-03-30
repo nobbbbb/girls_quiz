@@ -4,7 +4,6 @@
 			<div class="about text-center">
 				<p>ご利用規約</p>
 				<p>プライバシーポリシー</p>
-				<p>お問い合わせ</p>
 			</div>
 		</div>
 	</footer>
