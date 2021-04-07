@@ -6,7 +6,7 @@
 
 					<!-- 利用規約ダイアログ -->
 					<v-dialog
-						v-model="dialog"
+						v-model="RuleDialog"
 						width="500"
 					>
 						<template v-slot:activator="{ on, attrs }">
@@ -87,21 +87,55 @@
 								</p>
 								<p class="text-right">以上</p>
 							</v-card-text>
+							<v-divider></v-divider>
 
-        <v-divider></v-divider>
-
-        <v-card-actions>
-          <v-spacer></v-spacer>
-          <v-btn
-            text
-            @click="dialog = false"
-          >
-            閉じる
-          </v-btn>
-        </v-card-actions>
-      </v-card>
+							<v-card-actions>
+								<v-spacer></v-spacer>
+								<v-btn
+									text
+									@click="RuleDialog = false"
+								>
+									閉じる
+								</v-btn>
+							</v-card-actions>
+						</v-card>
 					</v-dialog>
-						<p>プライバシーポリシー</p>
+
+					<!-- プライバシーポリシーダイアログ -->
+					<v-dialog
+						v-model="PolicyDialog"
+						width="500"
+					>
+						<template v-slot:activator="{ on, attrs }">
+							<div
+								v-bind="attrs"
+								v-on="on"
+							>
+								<p>プライバシーポリシー</p>	
+							</div>
+						</template>
+
+						<v-card>
+							<v-card-title class="headline grey lighten-2">
+								プライバシーポリシー
+							</v-card-title>
+							<v-card-text>
+								
+								<p class="text-right">以上</p>
+							</v-card-text>
+							<v-divider></v-divider>
+
+							<v-card-actions>
+								<v-spacer></v-spacer>
+								<v-btn
+									text
+									@click="PolicyDialog = false"
+								>
+									閉じる
+								</v-btn>
+							</v-card-actions>
+						</v-card>
+					</v-dialog>
 				</div>
 			</div>
 		</div>
@@ -113,7 +147,8 @@ export default {
 	name: "Footer",
 	data() {
 		return {
-			dialog: false,
+			RuleDialog: false,
+			PolicyDialog: false
 		}
 	}
 }
