@@ -1,8 +1,8 @@
 <template>
 	<footer>
-		<div class="container mt-4">
+		<div class="container">
 			<div class="text-center">
-				<div class="about">
+				<div class="dialog">
 
 					<!-- 利用規約ダイアログ -->
 					<v-dialog
@@ -10,11 +10,11 @@
 						width="500"
 					>
 						<template v-slot:activator="{ on, attrs }">
-							<div
+							<div class="about"
 								v-bind="attrs"
 								v-on="on"
 							>
-								<p>ご利用規約</p>	
+								<span>ご利用規約</span>	
 							</div>
 						</template>
 
@@ -107,11 +107,11 @@
 						width="500"
 					>
 						<template v-slot:activator="{ on, attrs }">
-							<div
+							<div class="about"
 								v-bind="attrs"
 								v-on="on"
 							>
-								<p>プライバシーポリシー</p>	
+								<span>プライバシーポリシー</span>	
 							</div>
 						</template>
 
@@ -158,9 +158,10 @@ export default {
 footer {
 	background-color: rgb(71, 187, 207);
 	color: white;
+	width: 100%;
 }
-.about p{
+.about{
 	display: inline-block;
-	padding: 0 1rem;
+	margin: 0 20px;
 }
 </style>
