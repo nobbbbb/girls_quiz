@@ -17,9 +17,6 @@ export default {
   components: {
 		Header,
 		Footer
-  },
-  data: () => ({
-    //
-  }),
+  }
 };
 </script>
