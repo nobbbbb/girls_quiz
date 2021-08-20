@@ -28,6 +28,7 @@
 				large
 				depressed
 			>
+				<font-awesome-icon :icon="['fab', 'twitter']" class="twitter" />
 				Twitterで呟く
 			</v-btn>
 		</div>
@@ -61,5 +62,9 @@ export default {
 }
 .button {
 	padding: 10px;
+}
+.twitter {
+	margin-right: 5px;
+	color: rgb(29,161,242);
 }
 </style>
