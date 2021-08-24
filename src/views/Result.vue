@@ -12,21 +12,33 @@
 		</div>
 
 		<div class="button mt-8">
-			<v-btn
-				large
-				depressed
+			<router-link
+				to="/"
+				class="link top"
 			>
-				トップへ戻る
-			</v-btn>
-			<v-btn
-				large
-				depressed
+				<v-btn
+					large
+					depressed
+				>
+					トップへ戻る
+				</v-btn>
+			</router-link>
+			<router-link
+				to="/quiz"
+				class="link quiz"
 			>
-				もう一度
-			</v-btn>
+				<v-btn
+					large
+					depressed
+				>
+					もう一度
+				</v-btn>
+			</router-link>
 			<v-btn
 				large
 				depressed
+				class="twitter-share-button"
+				href="https://twitter.com/intent/tweet"
 			>
 				<font-awesome-icon :icon="['fab', 'twitter']" class="twitter" />
 				Twitterで呟く
@@ -66,5 +78,9 @@ export default {
 .twitter {
 	margin-right: 5px;
 	color: rgb(29,161,242);
+}
+.link {
+	text-decoration: none;
+	margin-right: 30px;
 }
 </style>
