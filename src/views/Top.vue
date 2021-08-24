@@ -6,7 +6,7 @@
 				<h1 class="last-title">Quiz</h1>
 			</div>
 		</div>
-			<div class="start-button">
+			<div class="start-button my-12 py-5">
 				<div class="text-center">
 					<router-link 
 						to="/quiz" 

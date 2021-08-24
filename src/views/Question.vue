@@ -6,7 +6,7 @@
 		<!-- 問題の画像表示 -->
 		<div class="question-wrapper mb-10">
 			<div class="girls-images">
-				<img src="sample_1.png" title="girls-before">
+				<img v-bind:src="item" title="girls-before">
 				<img src="sample_1.png" title="girls-after">
 			</div>
 			<p>変化しているのはどこ？</p>
@@ -72,7 +72,8 @@ export default {
 	name: 'Question',
 	data: function() {
 		return {
-			count: 1
+			count: 1,
+			item: "sample_1.png"
 		}
 	}
 }
