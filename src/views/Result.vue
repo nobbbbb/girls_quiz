@@ -38,9 +38,11 @@
 				large
 				depressed
 				class="twitter-share-button"
-				href="https://twitter.com/intent/tweet"
+				:href=twitter
 				target="_blank"
 				rel="noopener noreferrer"
+				data-text="aaaa"
+				data-show-count="false"
 			>
 				<font-awesome-icon :icon="['fab', 'twitter']" class="twitter" />
 				Twitterで呟く
@@ -59,7 +61,8 @@ export default {
 			result: {
 				charactor: 'メンヘラ',
 				detail: '今は話しかけないで欲しいから'
-			}
+			},
+			twitter: "https://twitter.com/intent/tweet?hashtags=GirlsQuiz"
 		}
 	}
 }
