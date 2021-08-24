@@ -39,6 +39,8 @@
 				depressed
 				class="twitter-share-button"
 				href="https://twitter.com/intent/tweet"
+				target="_blank"
+				rel="noopener noreferrer"
 			>
 				<font-awesome-icon :icon="['fab', 'twitter']" class="twitter" />
 				Twitterで呟く
