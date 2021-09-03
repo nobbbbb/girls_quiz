@@ -5,66 +5,42 @@
 		</div>
 		<!-- 問題の画像表示 -->
 		<div class="question-wrapper mb-10">
-			<div class="girls-images">
-				<img v-bind:src="item" title="girls-before">
-				<img src="sample_1.png" title="girls-after">
+			<div 
+				class="girls-images"
+				v-for="(item, questionIndex) in questions"
+				:key=questionIndex
+				>
+				<div
+					v-for="(image, imageIndex) in item.image"
+					:key=imageIndex
+				>
+				<img :src=image.before title="girls-before">
+				</div>
 			</div>
 			<p>変化しているのはどこ？</p>
 		</div>
 		<!-- 回答の選択肢表示 -->
+		
 		<div class="answer-wrapper my-10">
-			<div class="answer-option">
+			<div 
+				class="answer-option"
+				v-for="(item, questionIndex) in questions"
+				:key=questionIndex
+			>
 					<v-btn 
 						depressed
 						large
 						rounded
 						min-width="150"
+						v-for="(selection, selectIndex) in item.selections"
+						:key=selectIndex
+						@click="counter"
 					>
-						選択肢1
-					</v-btn>
-					<v-btn 
-						depressed
-						large
-						rounded
-						min-width="150"
-					>
-						選択肢2
-					</v-btn>
-					<v-btn 
-						depressed
-						large
-						rounded
-						min-width="150"
-					>
-						選択肢3
-					</v-btn>
-					<v-btn 
-						depressed
-						large
-						rounded
-						min-width="150"
-					>
-						選択肢4
-					</v-btn>
-					<v-btn 
-						depressed
-						large
-						rounded
-						min-width="150"
-					>
-						選択肢5
-					</v-btn>
-					<v-btn 
-						depressed
-						large
-						rounded
-						min-width="150"
-					>
-						選択肢6
+						{{ selection.choice }}
 					</v-btn>
 			</div>
 		</div>
-	</div>	
+	</div>
 </template>
 
 <script>
@@ -73,10 +49,37 @@ export default {
 	data: function() {
 		return {
 			count: 1,
-			item: "sample_1.png"
+			questions: [
+				{ 
+					image: [
+						{ before: 'sample_1.jpg' },
+						{ after: 'sample_1.jpg' }
+					]
+				},
+				{ 
+					selections: [
+						{
+							choice: '眉毛'
+						},
+						{
+							choice: '前髪'
+						},
+						{
+							choice: '特になし'
+						},
+						{ 
+							choice: '髪の巻き'
+						}
+					]
+				},
+				{ 
+					answer: '前髪'
+				}
+			]
 		}
 	}
 }
+
 </script>
 <style scoped>
 .question-wrapper {
@@ -95,6 +98,5 @@ img {
 	grid-template-columns: 20% 20%;
 	grid-gap: 50px 180px;
 	width: 420px;
-	
 }
 </style>
