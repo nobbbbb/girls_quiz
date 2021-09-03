@@ -77,6 +77,16 @@ export default {
 				}
 			]
 		}
+	},
+
+	methods: {
+		counter: function() {
+			if (this.count<5) {
+				return this.count ++
+			} else {
+				this.$router.push('/result')
+			}
+		}
 	}
 }
 
