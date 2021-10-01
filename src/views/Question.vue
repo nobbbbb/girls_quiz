@@ -38,7 +38,8 @@ export default {
 			answers: [],
 			reason: {},
 			count: 1,
-			question:
+			question: {},
+			questions: [
 				{ 
 					image: { 
 						before: 'sample_1.jpg',
@@ -52,16 +53,86 @@ export default {
 							choice: '前髪'
 						},
 						{
-							choice: '特になし'
+							choice: '髪の巻き'
 						},
 						{ 
-							choice: '髪の巻き'
+							choice: '特になし'
 						}
 					],
 					answer: '前髪',
 					charactor: 'メンヘラ',
 					reason: '全然自分のことを見てくれていないから'
+				},
+				{ 
+					image: { 
+						before: 'sample_2.jpg',
+						after: 'sample_2.jpg'
+					},
+					selections: [
+						{
+							choice: 'まつ毛'
+						},
+						{
+							choice: '髪色'
+						},
+						{
+							choice: 'アイライン'
+						},
+						{ 
+							choice: 'アイプチ'
+						}
+					],
+					answer: 'アイライン',
+					charactor: '清楚系',
+					reason: '馴れ馴れしかったから'
+				},
+				{ 
+					image: { 
+						before: 'sample_3.jpg',
+						after: 'sample_3.jpg'
+					},
+					selections: [
+						{
+							choice: 'カラコン'
+						},
+						{
+							choice: 'アイシャドウ'
+						},
+						{
+							choice: '前髪'
+						},
+						{ 
+							choice: 'シャンプー'
+						}
+					],
+					answer: 'カラコン',
+					charactor: '腹黒系',
+					reason: '自分に興味なさそうで腹立つから'
+				},
+				{ 
+					image: { 
+						before: 'sample_4.jpg',
+						after: 'sample_4.jpg'
+					},
+					selections: [
+						{
+							choice: '髪型'
+						},
+						{
+							choice: '顔の調子'
+						},
+						{
+							choice: 'チーク'
+						},
+						{ 
+							choice: 'リップ'
+						}
+					],
+					answer: 'チーク',
+					charactor: 'サバサバ系',
+					reason: 'ヨイショされてるようで嫌だから'
 				}
+			]
 		}
 	},
 
