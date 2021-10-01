@@ -135,15 +135,26 @@ export default {
 			]
 		}
 	},
-
 	methods: {
 		counter: function() {
 			if (this.count<3) {
+				this.question = this.shuffle(this.questions)[0]
 				return this.count ++
+
 			} else {
 				this.$router.push('/result')
 			}
+		},
+		shuffle: function(array) {
+			for(let i =array.length-1 ; i>0 ;i--){
+        let j = Math.floor( Math.random() * (i + 1) );
+        [array[i],array[j]]=[array[j],array[i]];
+    }
+			return array
 		}
+	},
+	mounted: function() {
+		this.question = this.shuffle(this.questions)[0]
 	}
 }
 
