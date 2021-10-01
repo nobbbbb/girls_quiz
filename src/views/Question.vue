@@ -41,6 +41,7 @@ export default {
 		return {
 			answers: [],
 			reasons: [],
+			charactors: [],
 			count: 1,
 			question: null,
 			questions: [
@@ -187,9 +188,10 @@ export default {
 		judgeAnswer: function(key) {
 			let clickedChoice = this.question.selections[key].choice
 			if (clickedChoice === this.question.answer) {
-				alert("mmm")
+				this.answers.push(this.question.answer)
 			} else {
-				alert("ppp")
+				this.reasons.push(this.question.reason)
+				this.charactors.push(this.question.charactor)
 			}
 		},
 		//Fisher-Yatesのシャッフルアルゴリズム
