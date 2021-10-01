@@ -4,42 +4,29 @@
 			<p>Q. {{ count }} / 5</p>
 		</div>
 		<!-- 問題の画像表示 -->
-		<div class="question-wrapper mb-10">
-			<div 
-				class="girls-images"
-				v-for="(item, questionIndex) in questions"
-				:key=questionIndex
-				>
-				<div
-					v-for="(image, imageIndex) in item.image"
-					:key=imageIndex
-				>
-				<img :src=image.before title="girls-before">
-				</div>
+		<div class="question-wrapper">
+			<div class="girls-image mb-10">
+					<img :src=question.image.before title="girls-before">
+					<img :src=question.image.after title="girls-after">
 			</div>
 			<p>変化しているのはどこ？</p>
 		</div>
 		<!-- 回答の選択肢表示 -->
-		
-		<div class="answer-wrapper my-10">
-			<div 
-				class="answer-option"
-				v-for="(item, questionIndex) in questions"
-				:key=questionIndex
-			>
-					<v-btn 
-						depressed
-						large
-						rounded
-						min-width="150"
-						v-for="(selection, selectIndex) in item.selections"
-						:key=selectIndex
-						@click="counter"
-					>
-						{{ selection.choice }}
-					</v-btn>
+			<div class="answer-wrapper my-10">
+				<div class="answer-option">
+				<v-btn 
+					depressed
+					large
+					rounded
+					min-width="150"
+					v-for="(selection, selectIndex) in question.selections"
+					:key=selectIndex
+					@click="counter"
+				>
+					{{ selection.choice }}
+				</v-btn>
+				</div>
 			</div>
-		</div>
 	</div>
 </template>
 
@@ -49,14 +36,12 @@ export default {
 	data: function() {
 		return {
 			count: 1,
-			questions: [
+			question:
 				{ 
-					image: [
-						{ before: 'sample_1.jpg' },
-						{ after: 'sample_1.jpg' }
-					]
-				},
-				{ 
+					image: { 
+						before: 'sample_1.jpg',
+						after: 'sample_1.jpg'
+					},
 					selections: [
 						{
 							choice: '眉毛'
@@ -70,12 +55,9 @@ export default {
 						{ 
 							choice: '髪の巻き'
 						}
-					]
-				},
-				{ 
+					],
 					answer: '前髪'
 				}
-			]
 		}
 	},
 
