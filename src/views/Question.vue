@@ -24,7 +24,7 @@
 					min-width="150"
 					v-for="(selection, selectIndex) in question.selections"
 					:key=selectIndex
-					@click="multipleHandler()"
+					@click="multipleHandler(selectIndex)"
 				>
 					{{ selection.choice }}
 				</v-btn>
@@ -168,10 +168,10 @@ export default {
 		}
 	},
 	methods: {
-		multipleHandler: function() {
+		multipleHandler: function(selectIndex) {
+			this.judgeAnswer(selectIndex) //正誤判別
 			this.countUp() //現在の問題数
 			this.changeQuestion() //解答後の問題変更
-			this.judgeAnswer() //正誤判別
 		},
 		countUp: function() {
 			if (this.count<3) {
@@ -184,7 +184,13 @@ export default {
 			this.question = this.questions[this.question.index++]
 			return this.question
 		},
-		judgeAnswer: function() {
+		judgeAnswer: function(selectIndex) {
+			let clickedChoice = this.question.selections[selectIndex].choice
+			if (clickedChoice === this.question.answer) {
+				alert("mmm")
+			} else {
+				alert("ppp")
+			}
 		},
 		//Fisher-Yatesのシャッフルアルゴリズム
 		shuffle: function(array) {
