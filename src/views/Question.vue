@@ -8,7 +8,7 @@
 			<!-- 問題の画像表示 -->
 			<div class="question-wrapper">
 				<h1>{{ question.charactor }}</h1>
-				<div class="girls-image mb-10">
+				<div class="girls-image mb-3">
 						<img :src=question.image.before title="girls-before">
 						<img :src=question.image.after title="girls-after">
 				</div>
