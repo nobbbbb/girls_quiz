@@ -3,15 +3,17 @@
 		<div class="count-info col-md-6 mx-10">
 			<p>Q. {{ count }} / 3</p>
 		</div>
-		<!-- 問題の画像表示 -->
-		<div class="question-wrapper">
-			<h1>{{ question.charactor }}</h1>
-			<div class="girls-image mb-10">
-					<img :src=question.image.before title="girls-before">
-					<img :src=question.image.after title="girls-after">
+		<!-- ブラウザ上でのnullエラー防止のためにv-ifを使用 -->
+		<div v-if=question> 
+			<!-- 問題の画像表示 -->
+			<div class="question-wrapper">
+				<h1>{{ question.charactor }}</h1>
+				<div class="girls-image mb-10">
+						<img :src=question.image.before title="girls-before">
+						<img :src=question.image.after title="girls-after">
+				</div>
+				<p>変化しているのはどこ？</p>
 			</div>
-			<p>変化しているのはどこ？</p>
-		</div>
 		<!-- 回答の選択肢表示 -->
 			<div class="answer-wrapper my-10">
 				<div class="answer-option">
@@ -22,12 +24,13 @@
 					min-width="150"
 					v-for="(selection, selectIndex) in question.selections"
 					:key=selectIndex
-					@click="counter"
+					@click="multipleHandler()"
 				>
 					{{ selection.choice }}
 				</v-btn>
 				</div>
 			</div>
+		</div>
 	</div>
 </template>
 
@@ -37,9 +40,9 @@ export default {
 	data: function() {
 		return {
 			answers: [],
-			reason: {},
+			reasons: [],
 			count: 1,
-			question: {},
+			question: null,
 			questions: [
 				{ 
 					image: { 
@@ -54,7 +57,7 @@ export default {
 							choice: '前髪'
 						},
 						{
-							choice: '髪の巻き'
+							choice: 'ファンデーション'
 						},
 						{
 							choice: 'メンタル'
@@ -161,16 +164,26 @@ export default {
 		}
 	},
 	methods: {
-		counter: function() {
+		multipleHandler: function() {
+			this.countUp() //現在の問題数
+			this.changeQuestion() //解答後の問題変更
+			this.judgeAnswer() //正誤判別
+		},
+		countUp: function() {
 			if (this.count<3) {
-				this.question = this.shuffle(this.questions)[0]
 				return this.count ++
 
 			} else {
 				this.$router.push('/result')
 			}
 		},
-
+		changeQuestion: function() {
+			let i = this.questions.indexOf(this.question)
+			this.question = this.questions[i++]
+			return this.question
+		},
+		judgeAnswer: function() {
+		},
 		//Fisher-Yatesのシャッフルアルゴリズム
 		shuffle: function(array) {
 			for(let i =array.length-1 ; i>0 ;i--){
