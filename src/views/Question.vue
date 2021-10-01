@@ -1,7 +1,7 @@
 <template>
 	<div class="container col-md-10">
 		<div class="count-info col-md-6 mx-10">
-			<p>Q. {{ count }} / 3</p>
+			<h2>Q. {{ count }} / 3</h2>
 		</div>
 		<!-- ブラウザ上でのnullエラー防止のためにv-ifを使用 -->
 		<div v-if=question> 
