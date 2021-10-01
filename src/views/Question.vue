@@ -71,7 +71,8 @@ export default {
 					],
 					answer: '前髪',
 					charactor: 'メンヘラ',
-					reason: '全然自分のことを見てくれていないから'
+					reason: '全然自分のことを見てくれていないから',
+					index: 0
 				},
 				{ 
 					image: { 
@@ -100,7 +101,8 @@ export default {
 					],
 					answer: 'アイライン',
 					charactor: '清楚系',
-					reason: '馴れ馴れしかったから'
+					reason: '馴れ馴れしかったから',
+					index: 1
 				},
 				{ 
 					image: { 
@@ -129,7 +131,8 @@ export default {
 					],
 					answer: 'カラコン',
 					charactor: '腹黒系',
-					reason: '自分に興味なさそうで腹立つから'
+					reason: '自分に興味なさそうで腹立つから',
+					index: 2
 				},
 				{ 
 					image: { 
@@ -158,7 +161,8 @@ export default {
 					],
 					answer: 'チーク',
 					charactor: 'サバサバ系',
-					reason: 'ヨイショされてるようで嫌だから'
+					reason: 'ヨイショされてるようで嫌だから',
+					index: 3
 				}
 			]
 		}
@@ -172,14 +176,12 @@ export default {
 		countUp: function() {
 			if (this.count<3) {
 				return this.count ++
-
 			} else {
 				this.$router.push('/result')
 			}
 		},
 		changeQuestion: function() {
-			let i = this.questions.indexOf(this.question)
-			this.question = this.questions[i++]
+			this.question = this.questions[this.question.index++]
 			return this.question
 		},
 		judgeAnswer: function() {
