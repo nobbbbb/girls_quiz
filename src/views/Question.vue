@@ -5,6 +5,7 @@
 		</div>
 		<!-- 問題の画像表示 -->
 		<div class="question-wrapper">
+			<h1>{{ question.charactor }}</h1>
 			<div class="girls-image mb-10">
 					<img :src=question.image.before title="girls-before">
 					<img :src=question.image.after title="girls-after">
@@ -55,6 +56,12 @@ export default {
 						{
 							choice: '髪の巻き'
 						},
+						{
+							choice: 'メンタル'
+						},
+						{
+							choice: '化粧水'
+						},
 						{ 
 							choice: '特になし'
 						}
@@ -80,6 +87,12 @@ export default {
 						},
 						{ 
 							choice: 'アイプチ'
+						},
+						{
+							choice: 'ノーズシャドウ'
+						},
+						{
+							choice: '特になし'
 						}
 					],
 					answer: 'アイライン',
@@ -103,6 +116,12 @@ export default {
 						},
 						{ 
 							choice: 'シャンプー'
+						},
+						{
+							choice: 'シリコン注入'
+						},
+						{
+							choice: '特になし'
 						}
 					],
 					answer: 'カラコン',
@@ -126,6 +145,12 @@ export default {
 						},
 						{ 
 							choice: 'リップ'
+						},
+						{
+							choice: '輝き'
+						},
+						{
+							choice: '特になし'
 						}
 					],
 					answer: 'チーク',
@@ -145,6 +170,8 @@ export default {
 				this.$router.push('/result')
 			}
 		},
+
+		//Fisher-Yatesのシャッフルアルゴリズム
 		shuffle: function(array) {
 			for(let i =array.length-1 ; i>0 ;i--){
         let j = Math.floor( Math.random() * (i + 1) );
