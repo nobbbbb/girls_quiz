@@ -1,7 +1,7 @@
 <template>
 	<div class="container col-md-10">
 		<div class="count-info col-md-6 mx-10">
-			<p>Q. {{ count }} / 5</p>
+			<p>Q. {{ count }} / 3</p>
 		</div>
 		<!-- 問題の画像表示 -->
 		<div class="question-wrapper">
@@ -35,6 +35,8 @@ export default {
 	name: 'Question',
 	data: function() {
 		return {
+			answers: [],
+			reason: {},
 			count: 1,
 			question:
 				{ 
@@ -56,14 +58,16 @@ export default {
 							choice: '髪の巻き'
 						}
 					],
-					answer: '前髪'
+					answer: '前髪',
+					charactor: 'メンヘラ',
+					reason: '全然自分のことを見てくれていないから'
 				}
 		}
 	},
 
 	methods: {
 		counter: function() {
-			if (this.count<5) {
+			if (this.count<3) {
 				return this.count ++
 			} else {
 				this.$router.push('/result')

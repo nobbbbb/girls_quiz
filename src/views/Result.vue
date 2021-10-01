@@ -6,7 +6,7 @@
 			outlined
 		>
 		<div class="result">
-			<h1>5問中{{ NumberResult }}問正解</h1>
+			<h1>3問中{{ NumberResult }}問正解</h1>
 			<h1>「{{ result.charactor }}」に怒られてしまいました</h1>
 			<h1>理由は「{{ result.detail }}」でした</h1>
 		</div>
