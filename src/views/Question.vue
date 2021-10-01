@@ -168,8 +168,8 @@ export default {
 		}
 	},
 	methods: {
-		multipleHandler: function(selectIndex) {
-			this.judgeAnswer(selectIndex) //正誤判別
+		multipleHandler: function(key) {
+			this.judgeAnswer(key) //正誤判別
 			this.countUp() //現在の問題数
 			this.changeQuestion() //解答後の問題変更
 		},
@@ -184,8 +184,8 @@ export default {
 			this.question = this.questions[this.question.index++]
 			return this.question
 		},
-		judgeAnswer: function(selectIndex) {
-			let clickedChoice = this.question.selections[selectIndex].choice
+		judgeAnswer: function(key) {
+			let clickedChoice = this.question.selections[key].choice
 			if (clickedChoice === this.question.answer) {
 				alert("mmm")
 			} else {
