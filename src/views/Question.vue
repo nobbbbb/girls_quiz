@@ -35,13 +35,12 @@
 </template>
 
 <script>
+import store from '../store'
 export default {
 	name: 'Question',
 	data: function() {
 		return {
-			answers: [],
-			reasons: [],
-			charactors: [],
+			sharedState: store.state,
 			count: 1,
 			question: null,
 			questions: [
@@ -71,7 +70,7 @@ export default {
 						}
 					],
 					answer: '前髪',
-					charactor: 'メンヘラ',
+					character: 'メンヘラ',
 					reason: '全然自分のことを見てくれていないから',
 					index: 0
 				},
@@ -101,7 +100,7 @@ export default {
 						}
 					],
 					answer: 'アイライン',
-					charactor: '清楚系',
+					character: '清楚系',
 					reason: '馴れ馴れしかったから',
 					index: 1
 				},
@@ -131,7 +130,7 @@ export default {
 						}
 					],
 					answer: 'カラコン',
-					charactor: '腹黒系',
+					character: '腹黒系',
 					reason: '自分に興味なさそうで腹立つから',
 					index: 2
 				},
@@ -161,7 +160,7 @@ export default {
 						}
 					],
 					answer: 'チーク',
-					charactor: 'サバサバ系',
+					character: 'サバサバ系',
 					reason: 'ヨイショされてるようで嫌だから',
 					index: 3
 				}
@@ -188,10 +187,10 @@ export default {
 		judgeAnswer: function(key) {
 			let clickedChoice = this.question.selections[key].choice
 			if (clickedChoice === this.question.answer) {
-				this.answers.push(this.question.answer)
+				this.sharedState.answers.push(this.question.answer)
 			} else {
-				this.reasons.push(this.question.reason)
-				this.charactors.push(this.question.charactor)
+				this.sharedState.reasons.push(this.question.reason)
+				this.sharedState.characters.push(this.question.character)
 			}
 		},
 		//Fisher-Yatesのシャッフルアルゴリズム
