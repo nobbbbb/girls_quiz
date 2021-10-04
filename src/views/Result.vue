@@ -53,10 +53,12 @@
 </template>
 
 <script>
+import store from '../store'
 export default {
 	name: 'Result',
 	data: function(){
 		return {
+			sharedState: store.state,
 			NumberResult: 1,
 			result: {
 				charactor: 'メンヘラ',
