@@ -204,6 +204,10 @@ export default {
 	},
 	mounted: function() {
 		this.question = this.shuffle(this.questions)[0]
+		let quizData = this.sharedState
+		quizData.answers = []
+		quizData.reasons = []
+		quizData.characters = []
 	}
 }
 
