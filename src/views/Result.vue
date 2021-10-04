@@ -6,7 +6,12 @@
 			outlined
 		>
 		<div class="result">
-			<h1>3問中{{ sharedState.answers.length }}問正解！</h1>
+			<div v-if='numberCheck'>
+				<h1>3問中{{ sharedState.answers.length }}問正解！</h1>
+			</div>
+			<div v-else>
+				<h1>全問不正解！</h1>
+			</div>
 			<h1 v-if="sharedState.answers.length == 3">ですが...</h1>
 			<h1>「{{ sharedState.characters[0] }}」に怒られてしまいました</h1>
 			<h1>理由は「{{ sharedState.reasons[0] }}」でした</h1>
@@ -66,6 +71,11 @@ export default {
 				detail: '今は話しかけないで欲しいから'
 			},
 			twitter: "https://twitter.com/intent/tweet?hashtags=GirlsQuiz"
+		}
+	},
+	computed: {
+		numberCheck: function() {
+			return this.sharedState.answers.length >= 1
 		}
 	}
 }
