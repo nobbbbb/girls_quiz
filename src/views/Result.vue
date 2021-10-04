@@ -6,9 +6,9 @@
 			outlined
 		>
 		<div class="result">
-			<h1>3問中{{ NumberResult }}問正解</h1>
-			<h1>「{{ result.charactor }}」に怒られてしまいました</h1>
-			<h1>理由は「{{ result.detail }}」でした</h1>
+			<h1>3問中{{ sharedState.answers.length }}問正解</h1>
+			<h1>「{{ sharedState.characters[0] }}」に怒られてしまいました</h1>
+			<h1>理由は「{{ sharedState.reasons[0] }}」でした</h1>
 		</div>
 
 		<div class="button mt-8">
