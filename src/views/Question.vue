@@ -51,27 +51,32 @@ export default {
 					},
 					selections: [
 						{
-							choice: '眉毛'
+							choice: '眉毛',
+							reason: '全然自分のことを見てくれていないから'
 						},
 						{
-							choice: '前髪'
+							choice: '前髪',
+							reason: '全然自分のことを見てくれていないから'
 						},
 						{
-							choice: 'ファンデーション'
+							choice: 'ファンデーション',
+							reason: '全然自分のことを見てくれていないから'
 						},
 						{
-							choice: 'メンタル'
+							choice: 'メンタル',
+							reason: '全然自分のことを見てくれていないから'
 						},
 						{
-							choice: '化粧水'
+							choice: '化粧水',
+							reason: '全然自分のことを見てくれていないから'
 						},
 						{ 
-							choice: '特になし'
+							choice: '特になし',
+							reason: '全然自分のことを見てくれていないから'
 						}
 					],
 					answer: '前髪',
 					character: 'メンヘラ',
-					reason: '全然自分のことを見てくれていないから',
 					index: 0
 				},
 				{ 
@@ -81,27 +86,32 @@ export default {
 					},
 					selections: [
 						{
-							choice: 'まつ毛'
+							choice: 'まつ毛',
+							reason: '馴れ馴れしかったから'
 						},
 						{
-							choice: '髪色'
+							choice: '髪色',
+							reason: '馴れ馴れしかったから'
 						},
 						{
-							choice: 'アイライン'
+							choice: 'アイライン',
+							reason: '馴れ馴れしかったから'
 						},
 						{ 
-							choice: 'アイプチ'
+							choice: 'アイプチ',
+							reason: '馴れ馴れしかったから'
 						},
 						{
-							choice: 'ノーズシャドウ'
+							choice: 'ノーズシャドウ',
+							reason: '馴れ馴れしかったから'
 						},
 						{
-							choice: '特になし'
+							choice: '特になし',
+							reason: '馴れ馴れしかったから'
 						}
 					],
 					answer: 'アイライン',
 					character: '清楚系',
-					reason: '馴れ馴れしかったから',
 					index: 1
 				},
 				{ 
@@ -111,27 +121,32 @@ export default {
 					},
 					selections: [
 						{
-							choice: 'カラコン'
+							choice: 'カラコン',
+							reason: '自分に興味なさそうで腹立つから'
 						},
 						{
-							choice: 'アイシャドウ'
+							choice: 'アイシャドウ',
+							reason: '自分に興味なさそうで腹立つから'
 						},
 						{
-							choice: '前髪'
+							choice: '前髪',
+							reason: '自分に興味なさそうで腹立つから'
 						},
 						{ 
-							choice: 'シャンプー'
+							choice: 'シャンプー',
+							reason: '自分に興味なさそうで腹立つから'
 						},
 						{
-							choice: 'シリコン注入'
+							choice: 'シリコン注入',
+							reason: '自分に興味なさそうで腹立つから'
 						},
 						{
-							choice: '特になし'
+							choice: '特になし',
+							reason: '自分に興味なさそうで腹立つから'
 						}
 					],
 					answer: 'カラコン',
 					character: '腹黒系',
-					reason: '自分に興味なさそうで腹立つから',
 					index: 2
 				},
 				{ 
@@ -141,27 +156,32 @@ export default {
 					},
 					selections: [
 						{
-							choice: '髪型'
+							choice: '髪型',
+							reason: 'ヨイショされてるようで嫌だから'
 						},
 						{
-							choice: '顔の調子'
+							choice: '顔の調子',
+							reason: 'ヨイショされてるようで嫌だから'
 						},
 						{
-							choice: 'チーク'
+							choice: 'チーク',
+							reason: 'ヨイショされてるようで嫌だから'
 						},
 						{ 
-							choice: 'リップ'
+							choice: 'リップ',
+							reason: 'ヨイショされてるようで嫌だから'
 						},
 						{
-							choice: '輝き'
+							choice: '輝き',
+							reason: 'ヨイショされてるようで嫌だから'
 						},
 						{
-							choice: '特になし'
+							choice: '特になし',
+							reason: 'ヨイショされてるようで嫌だから'
 						}
 					],
 					answer: 'チーク',
 					character: 'サバサバ系',
-					reason: 'ヨイショされてるようで嫌だから',
 					index: 3
 				}
 			]
@@ -185,11 +205,12 @@ export default {
 			return this.question
 		},
 		judgeAnswer: function(key) {
-			let clickedChoice = this.question.selections[key].choice
-			if (clickedChoice === this.question.answer) {
+			let clickedSelection = this.question.selections[key]
+			if (clickedSelection.choice === this.question.answer) {
 				this.sharedState.answers.push(this.question.answer)
+				this.sharedState.funnyReasons.push(clickedSelection.reason)
 			} else {
-				this.sharedState.reasons.push(this.question.reason)
+				this.sharedState.reasons.push(clickedSelection.reason)
 				this.sharedState.characters.push(this.question.character)
 			}
 		},

@@ -6,7 +6,8 @@
 			outlined
 		>
 		<div class="result">
-			<h1>3問中{{ sharedState.answers.length }}問正解</h1>
+			<h1>3問中{{ sharedState.answers.length }}問正解！</h1>
+			<h1 v-if="sharedState.answers.length == 3">ですが...</h1>
 			<h1>「{{ sharedState.characters[0] }}」に怒られてしまいました</h1>
 			<h1>理由は「{{ sharedState.reasons[0] }}」でした</h1>
 		</div>
