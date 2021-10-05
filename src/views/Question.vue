@@ -56,7 +56,7 @@ export default {
 						},
 						{
 							choice: '前髪',
-							reason: '全然自分のことを見てくれていないから'
+							reason: '今は話しかけて欲しくないから'
 						},
 						{
 							choice: 'ファンデーション',
@@ -87,27 +87,27 @@ export default {
 					selections: [
 						{
 							choice: 'まつ毛',
-							reason: '馴れ馴れしかったから'
+							reason: '適当なこと言っているから'
 						},
 						{
 							choice: '髪色',
-							reason: '馴れ馴れしかったから'
+							reason: '適当なこと言っているから'
 						},
 						{
 							choice: 'アイライン',
-							reason: '馴れ馴れしかったから'
+							reason: '馴れ馴れしいから'
 						},
 						{ 
 							choice: 'アイプチ',
-							reason: '馴れ馴れしかったから'
+							reason: '適当なこと言っているから'
 						},
 						{
 							choice: 'ノーズシャドウ',
-							reason: '馴れ馴れしかったから'
+							reason: '適当なこと言っているから'
 						},
 						{
 							choice: '特になし',
-							reason: '馴れ馴れしかったから'
+							reason: '適当なこと言っているから'
 						}
 					],
 					answer: 'アイライン',
@@ -122,7 +122,7 @@ export default {
 					selections: [
 						{
 							choice: 'カラコン',
-							reason: '自分に興味なさそうで腹立つから'
+							reason: 'なんか最近言動が癇に障るから'
 						},
 						{
 							choice: 'アイシャドウ',
@@ -165,7 +165,7 @@ export default {
 						},
 						{
 							choice: 'チーク',
-							reason: 'ヨイショされてるようで嫌だから'
+							reason: 'ジロジロ見られて君が悪いから'
 						},
 						{ 
 							choice: 'リップ',
