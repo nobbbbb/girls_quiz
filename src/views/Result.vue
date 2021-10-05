@@ -5,12 +5,30 @@
 			color="rgba(71, 187, 207, 0.2)"
 			outlined
 		>
-		<div class="result">
-			<h1>3問中{{ NumberResult }}問正解</h1>
-			<h1>「{{ result.charactor }}」に怒られてしまいました</h1>
-			<h1>理由は「{{ result.detail }}」でした</h1>
+		<div class="result" v-if='sharedState.characters[0] != null'>
+			<div v-if='badCase'>
+				<h1>全問不正解！</h1>
+			</div>
+			<div v-else-if='goodCase'>
+				<h1>全問正解！</h1>
+				<h1>ですが...</h1>
+			</div>
+			<div v-else>
+				<h1>3問中{{ sharedState.answers.length }}問正解！</h1>
+			</div>
+			<div v-if='goodCase'>
+				<h1>「{{ sharedState.funnyCharacters[0] }}」に怒られてしまいました</h1>
+				<h1>理由は「{{ sharedState.funnyReasons[0] }}」でした</h1>
+			</div>
+			<div v-else>
+				<h1>「{{ sharedState.characters[0] }}」に怒られてしまいました</h1>
+				<h1>理由は「{{ sharedState.reasons[0] }}」でした</h1>
+			</div>
 		</div>
-
+		<div v-else>
+			<h1 class="py-12 my-12">怒られない時が来るといいですね。
+			</h1>
+		</div>
 		<div class="button mt-8">
 			<router-link
 				to="/"
@@ -40,9 +58,8 @@
 				class="twitter-share-button"
 				:href=twitter
 				target="_blank"
-				rel="noopener noreferrer"
-				data-text="aaaa"
-				data-show-count="false"
+				rel="noopener"
+				@click='makeText(sharedState)'
 			>
 				<font-awesome-icon :icon="['fab', 'twitter']" class="twitter" />
 				Twitterで呟く
@@ -53,16 +70,21 @@
 </template>
 
 <script>
+import store from '../store'
 export default {
 	name: 'Result',
 	data: function(){
 		return {
-			NumberResult: 1,
-			result: {
-				charactor: 'メンヘラ',
-				detail: '今は話しかけないで欲しいから'
-			},
-			twitter: "https://twitter.com/intent/tweet?hashtags=GirlsQuiz"
+			sharedState: store.state,
+			twitter: "https://twitter.com/intent/tweet?hashtags=GirlsQuiz&text=あなたは何問正解できる？" 
+		}
+	},
+	computed: {
+		badCase: function() {
+			return this.sharedState.answers.length == 0
+		},
+		goodCase: function() {
+			return this.sharedState.answers.length == 3
 		}
 	}
 }
@@ -87,5 +109,8 @@ export default {
 .link {
 	text-decoration: none;
 	margin-right: 30px;
+}
+.card {
+	height: 450px;
 }
 </style>

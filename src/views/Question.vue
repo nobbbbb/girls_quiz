@@ -35,13 +35,12 @@
 </template>
 
 <script>
+import store from '../store'
 export default {
 	name: 'Question',
 	data: function() {
 		return {
-			answers: [],
-			reasons: [],
-			charactors: [],
+			sharedState: store.state,
 			count: 1,
 			question: null,
 			questions: [
@@ -52,27 +51,32 @@ export default {
 					},
 					selections: [
 						{
-							choice: '眉毛'
+							choice: '眉毛',
+							reason: '全然自分のことを見てくれていないから'
 						},
 						{
-							choice: '前髪'
+							choice: '前髪',
+							reason: '今は話しかけて欲しくないから'
 						},
 						{
-							choice: 'ファンデーション'
+							choice: 'ファンデーション',
+							reason: '全然自分のことを見てくれていないから'
 						},
 						{
-							choice: 'メンタル'
+							choice: 'メンタル',
+							reason: 'メンタルとか意味わからないから'
 						},
 						{
-							choice: '化粧水'
+							choice: '化粧水',
+							reason: 'そこ気づかれても嬉しくないから'
 						},
 						{ 
-							choice: '特になし'
+							choice: '特になし',
+							reason: '全然自分のことを見てくれていないから'
 						}
 					],
 					answer: '前髪',
-					charactor: 'メンヘラ',
-					reason: '全然自分のことを見てくれていないから',
+					character: 'メンヘラ',
 					index: 0
 				},
 				{ 
@@ -82,27 +86,32 @@ export default {
 					},
 					selections: [
 						{
-							choice: 'まつ毛'
+							choice: 'まつ毛',
+							reason: '適当なこと言っているから'
 						},
 						{
-							choice: '髪色'
+							choice: '髪色',
+							reason: 'チャラそうだから'
 						},
 						{
-							choice: 'アイライン'
+							choice: 'アイライン',
+							reason: '馴れ馴れしいから'
 						},
 						{ 
-							choice: 'アイプチ'
+							choice: 'アイプチ',
+							reason: 'アイプチに触れるのはデリカシーないから'
 						},
 						{
-							choice: 'ノーズシャドウ'
+							choice: 'ノーズシャドウ',
+							reason: '適当なこと言っているから'
 						},
 						{
-							choice: '特になし'
+							choice: '特になし',
+							reason: '適当なこと言っているから'
 						}
 					],
 					answer: 'アイライン',
-					charactor: '清楚系',
-					reason: '馴れ馴れしかったから',
+					character: '清楚系',
 					index: 1
 				},
 				{ 
@@ -112,27 +121,32 @@ export default {
 					},
 					selections: [
 						{
-							choice: 'カラコン'
+							choice: 'カラコン',
+							reason: '最近言動が癇に障るから'
 						},
 						{
-							choice: 'アイシャドウ'
+							choice: 'アイシャドウ',
+							reason: '自分に興味なさそうで腹立つから'
 						},
 						{
-							choice: '前髪'
+							choice: '前髪',
+							reason: '自分に興味なさそうで腹立つから'
 						},
 						{ 
-							choice: 'シャンプー'
+							choice: 'シャンプー',
+							reason: 'なんか気持ち悪いから'
 						},
 						{
-							choice: 'シリコン注入'
+							choice: 'シリコン注入',
+							reason: '整形疑惑かけられているから'
 						},
 						{
-							choice: '特になし'
+							choice: '特になし',
+							reason: '自分に興味なさそうで腹立つから'
 						}
 					],
 					answer: 'カラコン',
-					charactor: '腹黒系',
-					reason: '自分に興味なさそうで腹立つから',
+					character: '腹黒系',
 					index: 2
 				},
 				{ 
@@ -142,27 +156,32 @@ export default {
 					},
 					selections: [
 						{
-							choice: '髪型'
+							choice: '髪型',
+							reason: 'ヨイショされてるようで嫌だから'
 						},
 						{
-							choice: '顔の調子'
+							choice: '顔の調子',
+							reason: 'ヨイショされてるようで嫌だから'
 						},
 						{
-							choice: 'チーク'
+							choice: 'チーク',
+							reason: 'ジロジロ見られて君が悪いから'
 						},
 						{ 
-							choice: 'リップ'
+							choice: 'リップ',
+							reason: 'ヨイショされてるようで嫌だから'
 						},
 						{
-							choice: '輝き'
+							choice: '輝き',
+							reason: '意味わからないから'
 						},
 						{
-							choice: '特になし'
+							choice: '特になし',
+							reason: 'ヨイショされてるようで嫌だから'
 						}
 					],
 					answer: 'チーク',
-					charactor: 'サバサバ系',
-					reason: 'ヨイショされてるようで嫌だから',
+					character: 'サバサバ系',
 					index: 3
 				}
 			]
@@ -186,12 +205,14 @@ export default {
 			return this.question
 		},
 		judgeAnswer: function(key) {
-			let clickedChoice = this.question.selections[key].choice
-			if (clickedChoice === this.question.answer) {
-				this.answers.push(this.question.answer)
+			let clickedSelection = this.question.selections[key]
+			if (clickedSelection.choice === this.question.answer) {
+				this.sharedState.answers.push(this.question.answer)
+				this.sharedState.funnyReasons.push(clickedSelection.reason)
+				this.sharedState.funnyCharacters.push(this.question.character)
 			} else {
-				this.reasons.push(this.question.reason)
-				this.charactors.push(this.question.charactor)
+				this.sharedState.reasons.push(clickedSelection.reason)
+				this.sharedState.characters.push(this.question.character)
 			}
 		},
 		//Fisher-Yatesのシャッフルアルゴリズム
@@ -205,6 +226,10 @@ export default {
 	},
 	mounted: function() {
 		this.question = this.shuffle(this.questions)[0]
+		let quizData = this.sharedState
+		quizData.answers = []
+		quizData.reasons = []
+		quizData.characters = []
 	}
 }
 
