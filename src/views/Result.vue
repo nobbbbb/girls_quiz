@@ -58,9 +58,8 @@
 				class="twitter-share-button"
 				:href=twitter
 				target="_blank"
-				rel="noopener noreferrer"
-				data-text="aaaa"
-				data-show-count="false"
+				rel="noopener"
+				@click='makeText(sharedState)'
 			>
 				<font-awesome-icon :icon="['fab', 'twitter']" class="twitter" />
 				Twitterで呟く
@@ -77,7 +76,7 @@ export default {
 	data: function(){
 		return {
 			sharedState: store.state,
-			twitter: "https://twitter.com/intent/tweet?hashtags=GirlsQuiz"
+			twitter: "https://twitter.com/intent/tweet?hashtags=GirlsQuiz" 
 		}
 	},
 	computed: {
