@@ -211,8 +211,8 @@ export default {
 				this.sharedState.funnyReasons.push(clickedSelection.reason)
 			} else {
 				this.sharedState.reasons.push(clickedSelection.reason)
-				this.sharedState.characters.push(this.question.character)
 			}
+			this.sharedState.characters.push(this.question.character)
 		},
 		//Fisher-Yatesのシャッフルアルゴリズム
 		shuffle: function(array) {

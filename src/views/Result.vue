@@ -5,21 +5,29 @@
 			color="rgba(71, 187, 207, 0.2)"
 			outlined
 		>
-		<div class="result">
+		<div class="result" v-if='sharedState.characters[0] != null'>
 			<div v-if='badCase'>
 				<h1>全問不正解！</h1>
 			</div>
 			<div v-else-if='goodCase'>
 				<h1>全問正解！</h1>
+				<h1>ですが...</h1>
 			</div>
 			<div v-else>
 				<h1>3問中{{ sharedState.answers.length }}問正解！</h1>
 			</div>
-			<h1 v-if="sharedState.answers.length == 3">ですが...</h1>
 			<h1>「{{ sharedState.characters[0] }}」に怒られてしまいました</h1>
-			<h1>理由は「{{ sharedState.reasons[0] }}」でした</h1>
+			<h1 v-if='goodCase'>
+				理由は「{{ sharedState.funnyReasons[0] }}」でした
+			</h1>
+			<h1 v-else>
+				理由は「{{ sharedState.reasons[0] }}」でした
+			</h1>
 		</div>
-
+		<div v-else>
+			<h1 class="py-12 my-12">怒られない時が来るといいですね。
+			</h1>
+		</div>
 		<div class="button mt-8">
 			<router-link
 				to="/"
@@ -106,5 +114,8 @@ export default {
 .link {
 	text-decoration: none;
 	margin-right: 30px;
+}
+.card {
+	height: 450px;
 }
 </style>
