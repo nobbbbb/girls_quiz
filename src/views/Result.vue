@@ -16,13 +16,14 @@
 			<div v-else>
 				<h1>3問中{{ sharedState.answers.length }}問正解！</h1>
 			</div>
-			<h1>「{{ sharedState.characters[0] }}」に怒られてしまいました</h1>
-			<h1 v-if='goodCase'>
-				理由は「{{ sharedState.funnyReasons[0] }}」でした
-			</h1>
-			<h1 v-else>
-				理由は「{{ sharedState.reasons[0] }}」でした
-			</h1>
+			<div v-if='goodCase'>
+				<h1>「{{ sharedState.funnyCharacters[0] }}」に怒られてしまいました</h1>
+				<h1>理由は「{{ sharedState.funnyReasons[0] }}」でした</h1>
+			</div>
+			<div v-else>
+				<h1>「{{ sharedState.characters[0] }}」に怒られてしまいました</h1>
+				<h1>理由は「{{ sharedState.reasons[0] }}」でした</h1>
+			</div>
 		</div>
 		<div v-else>
 			<h1 class="py-12 my-12">怒られない時が来るといいですね。

@@ -209,10 +209,11 @@ export default {
 			if (clickedSelection.choice === this.question.answer) {
 				this.sharedState.answers.push(this.question.answer)
 				this.sharedState.funnyReasons.push(clickedSelection.reason)
+				this.sharedState.funnyCharacters.push(this.question.character)
 			} else {
 				this.sharedState.reasons.push(clickedSelection.reason)
+				this.sharedState.characters.push(this.question.character)
 			}
-			this.sharedState.characters.push(this.question.character)
 		},
 		//Fisher-Yatesのシャッフルアルゴリズム
 		shuffle: function(array) {

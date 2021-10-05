@@ -3,6 +3,7 @@ export default {
 			answers: [],
 			reasons: [],
 			funnyReasons: [],
-			characters: []
+			characters: [],
+			funnyCharacters: []
 		}
 }
