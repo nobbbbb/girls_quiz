@@ -64,11 +64,11 @@ export default {
 						},
 						{
 							choice: 'メンタル',
-							reason: '全然自分のことを見てくれていないから'
+							reason: 'メンタルとか意味わからないから'
 						},
 						{
 							choice: '化粧水',
-							reason: '全然自分のことを見てくれていないから'
+							reason: 'そこ気づかれても嬉しくないから'
 						},
 						{ 
 							choice: '特になし',
@@ -91,7 +91,7 @@ export default {
 						},
 						{
 							choice: '髪色',
-							reason: '適当なこと言っているから'
+							reason: 'チャラそうだから'
 						},
 						{
 							choice: 'アイライン',
@@ -99,7 +99,7 @@ export default {
 						},
 						{ 
 							choice: 'アイプチ',
-							reason: '適当なこと言っているから'
+							reason: 'アイプチに触れるのはデリカシーないから'
 						},
 						{
 							choice: 'ノーズシャドウ',
@@ -122,7 +122,7 @@ export default {
 					selections: [
 						{
 							choice: 'カラコン',
-							reason: 'なんか最近言動が癇に障るから'
+							reason: '最近言動が癇に障るから'
 						},
 						{
 							choice: 'アイシャドウ',
@@ -134,11 +134,11 @@ export default {
 						},
 						{ 
 							choice: 'シャンプー',
-							reason: '自分に興味なさそうで腹立つから'
+							reason: 'なんか気持ち悪いから'
 						},
 						{
 							choice: 'シリコン注入',
-							reason: '自分に興味なさそうで腹立つから'
+							reason: '整形疑惑かけられているから'
 						},
 						{
 							choice: '特になし',
@@ -173,7 +173,7 @@ export default {
 						},
 						{
 							choice: '輝き',
-							reason: 'ヨイショされてるようで嫌だから'
+							reason: '意味わからないから'
 						},
 						{
 							choice: '特になし',
