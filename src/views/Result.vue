@@ -76,7 +76,7 @@ export default {
 	data: function(){
 		return {
 			sharedState: store.state,
-			twitter: "https://twitter.com/intent/tweet?hashtags=GirlsQuiz" 
+			twitter: "https://twitter.com/intent/tweet?hashtags=GirlsQuiz&text=あなたは何問正解できる？" 
 		}
 	},
 	computed: {
