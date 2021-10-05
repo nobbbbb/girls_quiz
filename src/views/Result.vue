@@ -77,11 +77,6 @@ export default {
 	data: function(){
 		return {
 			sharedState: store.state,
-			NumberResult: 1,
-			result: {
-				charactor: 'メンヘラ',
-				detail: '今は話しかけないで欲しいから'
-			},
 			twitter: "https://twitter.com/intent/tweet?hashtags=GirlsQuiz"
 		}
 	},
