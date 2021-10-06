@@ -111,6 +111,6 @@ export default {
 	margin-right: 30px;
 }
 .card {
-	height: 450px;
+	height: 500px;
 }
 </style>
