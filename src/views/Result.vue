@@ -26,7 +26,7 @@
 			</div>
 		</div>
 		<div v-else>
-			<h1 class="py-12 my-12">怒られない時が来るといいですね。
+			<h1 class="py-16 my-16">怒られない時が来るといいですね。
 			</h1>
 		</div>
 		<div class="button mt-8">
