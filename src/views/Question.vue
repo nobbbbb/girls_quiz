@@ -47,7 +47,7 @@ export default {
 				{ 
 					image: { 
 						before: 'sample_1.jpg',
-						after: 'sample_1.jpg'
+						after: 'sample_1_after.jpeg'
 					},
 					selections: [
 						{
@@ -82,7 +82,7 @@ export default {
 				{ 
 					image: { 
 						before: 'sample_2.jpg',
-						after: 'sample_2.jpg'
+						after: 'sample_2_after.jpeg'
 					},
 					selections: [
 						{
@@ -117,7 +117,7 @@ export default {
 				{ 
 					image: { 
 						before: 'sample_3.jpg',
-						after: 'sample_3.jpg'
+						after: 'sample_3_after.jpeg'
 					},
 					selections: [
 						{
@@ -152,7 +152,7 @@ export default {
 				{ 
 					image: { 
 						before: 'sample_4.jpg',
-						after: 'sample_4.jpg'
+						after: 'sample_4_after.jpeg'
 					},
 					selections: [
 						{
