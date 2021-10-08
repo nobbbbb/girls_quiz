@@ -5,7 +5,7 @@
 			color="rgba(71, 187, 207, 0.2)"
 			outlined
 		>
-		<div class="result" v-if='sharedState.characters[0] != null'>
+		<div class="result" v-if='sharedState.answers[0] != null'>
 			<div v-if='badCase'>
 				<h1>全問不正解！</h1>
 			</div>
@@ -26,7 +26,7 @@
 			</div>
 		</div>
 		<div v-else>
-			<h1 class="py-12 my-12">怒られない時が来るといいですね。
+			<h1 class="py-16 my-16">怒られない時が来るといいですね。
 			</h1>
 		</div>
 		<div class="button mt-8">
@@ -111,6 +111,6 @@ export default {
 	margin-right: 30px;
 }
 .card {
-	height: 450px;
+	height: 500px;
 }
 </style>
