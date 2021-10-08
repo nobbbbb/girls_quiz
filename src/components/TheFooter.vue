@@ -120,7 +120,8 @@
 								プライバシーポリシー
 							</v-card-title>
 							<v-card-text>
-								
+								<br>
+								<p>分析導入後、後日記述</p>
 								<p class="text-right">以上</p>
 							</v-card-text>
 							<v-divider></v-divider>
