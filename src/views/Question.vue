@@ -224,7 +224,7 @@ export default {
 			return array
 		}
 	},
-	mounted: function() {
+	created: function() {
 		this.question = this.shuffle(this.questions)[0]
 		let quizData = this.sharedState
 		quizData.answers = []

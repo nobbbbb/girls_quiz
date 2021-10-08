@@ -5,7 +5,10 @@
 			color="rgba(71, 187, 207, 0.2)"
 			outlined
 		>
-		<div class="result" v-if='sharedState.answers[0] != null'>
+		<div class="result"
+			v-if='sharedState.characters[0] != null 
+				|| sharedState.funnyCharacters[0] != null'
+		>
 			<div v-if='badCase'>
 				<h1>全問不正解！</h1>
 			</div>
