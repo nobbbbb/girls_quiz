@@ -73,5 +73,15 @@
       "vue-cli-service lint",
       "git add"
     ]
-  }
+  },
+	"jest": {
+		"moduleFileExtensions": [
+			"js",
+			"json",
+			"vue"
+		],
+		"moduleNameMapper": {
+			"^@/(.*)$": "<rootDir>/src/$1"
+		}
+	}
 }
