@@ -4,13 +4,10 @@ import VueRouter from 'vue-router'
 
 const localVue = createLocalVue()
 localVue.use(VueRouter)
-const router = new VueRouter()
 
 describe('Top.vue', () => {
 	const wrapper = shallowMount(Top, {
-		localVue,
-		router,
-		stubs: ['router-link', 'router-view']
+		localVue
 	})
 
 	it("タイトルが表示されている", function(){
