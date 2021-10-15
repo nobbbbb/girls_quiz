@@ -7,7 +7,7 @@
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
-		"test": "jest"
+    "test": "jest"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
@@ -75,17 +75,17 @@
       "git add"
     ]
   },
-	"jest": {
-		"moduleFileExtensions": [
-			"js",
-			"json",
-			"vue"
-		],
-		"moduleNameMapper": {
-			"^@/(.*)$": "<rootDir>/src/$1"
-		}
-	},
-	"transform": {
-		".*\\.(vue)$": "vue-jest"
-	}
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "vue"
+    ],
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/src/$1"
+    }
+  },
+  "transform": {
+    ".*\\.(vue)$": "vue-jest"
+  }
 }
