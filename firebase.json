@@ -5,6 +5,16 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ]
+    ],
+		"rewrites": [
+			{
+				"source": "/404",
+				"function": "notFound"
+			},
+			{
+				"source": "**",
+				"destination": "/index.html"
+			}
+		]
   }
 }
