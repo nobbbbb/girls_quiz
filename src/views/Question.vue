@@ -16,8 +16,9 @@
 			</div>
 		<!-- 回答の選択肢表示 -->
 			<div class="answer-wrapper my-10">
-				<div class="answer-option">
-				<v-btn 
+				<div class="answer-options">
+				<v-btn
+					class="answer-option"
 					depressed
 					large
 					rounded
@@ -224,7 +225,7 @@ export default {
 			return array
 		}
 	},
-	mounted: function() {
+	created: function() {
 		this.question = this.shuffle(this.questions)[0]
 		let quizData = this.sharedState
 		quizData.answers = []
@@ -246,7 +247,7 @@ img {
 	display: block;
 	text-align: center;
 }
-.answer-option {
+.answer-options {
 	display: inline-grid;
 	grid-template-columns: 20% 20%;
 	grid-gap: 50px 180px;
