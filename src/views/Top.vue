@@ -1,12 +1,12 @@
 <template>
   <div class="container">
-		<div class="row my-12">
-			<div class="app-title col-md-8">
-				<h1 class="first-title">Girls</h1>
-				<h1 class="last-title">Quiz</h1>
+		<div class="row my-10">
+			<div class="app-title col-md-12">
+				<p class="first-title">Girls</p>
+				<p class="last-title">Quiz</p>
 			</div>
 		</div>
-			<div class="start-button my-12 py-5">
+			<div class="start-button">
 				<div class="text-center">
 					<router-link 
 						to="/quiz" 
@@ -35,7 +35,8 @@ export default {
 
 <style scoped>
 .app-title {
-	font-size: 3rem;
+	font-size: 6em;
+	font-weight: bold;
 	text-align: center;
 	font-family: 'Courier New', Courier, monospace;
 }
