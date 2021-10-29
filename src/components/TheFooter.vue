@@ -161,7 +161,7 @@ footer {
 	color: white;
 	width: 100%;
 }
-container {
+.container {
 	height: 40px;
 }
 .about{
