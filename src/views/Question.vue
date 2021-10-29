@@ -250,6 +250,7 @@ img {
 	width: 45%;
 	padding: 20px;
 	max-width: 400px;
+	min-width: 250px;
 }
 .answer-wrapper {
 	display: block;
