@@ -6,9 +6,9 @@
 		<!-- ブラウザ上でのnullエラー防止のためにv-ifを使用 -->
 		<div v-if=question> 
 			<!-- 問題の画像表示 -->
-			<div class="question-wrapper my-10">
+			<div class="question-wrapper my-5">
 				<h1>{{ question.charactor }}</h1>
-				<div class="girls-image my-5">
+				<div class="girls-image">
 						<img :src=question.image.before title="girls-before">
 						<img :src=question.image.after title="girls-after">
 				</div>
@@ -236,11 +236,8 @@ export default {
 
 </script>
 <style scoped>
-.container {
-	position: relative;
-}
 .count-info {
-	position: absolute;
+	position: relative;
 	left: 10%;
 }
 .question-wrapper {
