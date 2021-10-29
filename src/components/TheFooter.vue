@@ -161,6 +161,9 @@ footer {
 	color: white;
 	width: 100%;
 }
+container {
+	height: 40px;
+}
 .about{
 	display: inline-block;
 	margin: 0 20px;
