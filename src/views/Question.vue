@@ -1,6 +1,6 @@
 <template>
 	<div class="container col-md-10">
-		<div class="count-info mx-10">
+		<div class="count-info">
 			<h2>Q. {{ count }} / 3</h2>
 		</div>
 		<!-- ブラウザ上でのnullエラー防止のためにv-ifを使用 -->
@@ -8,7 +8,7 @@
 			<!-- 問題の画像表示 -->
 			<div class="question-wrapper my-10">
 				<h1>{{ question.charactor }}</h1>
-				<div class="girls-image mb-3">
+				<div class="girls-image my-5">
 						<img :src=question.image.before title="girls-before">
 						<img :src=question.image.after title="girls-after">
 				</div>
@@ -241,7 +241,7 @@ export default {
 }
 .count-info {
 	position: absolute;
-	left: 5%;
+	left: 10%;
 }
 .question-wrapper {
 	text-align: center;
