@@ -1,12 +1,12 @@
 <template>
 	<div class="container col-md-10">
-		<div class="count-info col-md-6 mx-10">
+		<div class="count-info mx-10">
 			<h2>Q. {{ count }} / 3</h2>
 		</div>
 		<!-- ブラウザ上でのnullエラー防止のためにv-ifを使用 -->
 		<div v-if=question> 
 			<!-- 問題の画像表示 -->
-			<div class="question-wrapper">
+			<div class="question-wrapper my-10">
 				<h1>{{ question.charactor }}</h1>
 				<div class="girls-image mb-3">
 						<img :src=question.image.before title="girls-before">
@@ -236,12 +236,20 @@ export default {
 
 </script>
 <style scoped>
+.container {
+	position: relative;
+}
+.count-info {
+	position: absolute;
+	left: 5%;
+}
 .question-wrapper {
 	text-align: center;
 }
 img {
 	width: 45%;
 	padding: 20px;
+	max-width: 400px;
 }
 .answer-wrapper {
 	display: block;
