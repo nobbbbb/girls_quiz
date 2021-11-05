@@ -9,30 +9,39 @@
 			v-if='sharedState.characters[0] != null 
 				|| sharedState.funnyCharacters[0] != null'
 		>
-			<div v-if='badCase'>
-				<h1>全問不正解！</h1>
+			<div class="fadeIn txt01">
+				<div v-if='badCase'>
+					<h1>全問不正解！</h1>
+				</div>
+				<div v-else-if='goodCase'>
+					<h1>全問正解！</h1>
+					<h1>ですが...</h1>
+				</div>
+				<div v-else>
+					<h1>3問中{{ sharedState.answers.length }}問正解！</h1>
+				</div>
 			</div>
-			<div v-else-if='goodCase'>
-				<h1>全問正解！</h1>
-				<h1>ですが...</h1>
+			<div class="fadeIn txt02">
+				<div v-if='goodCase'>
+					<h1>「{{ sharedState.funnyCharacters[0] }}」に怒られてしまいました</h1>
+				</div>
+				<div v-else>
+					<h1>「{{ sharedState.characters[0] }}」に怒られてしまいました</h1>
+				</div>
 			</div>
-			<div v-else>
-				<h1>3問中{{ sharedState.answers.length }}問正解！</h1>
-			</div>
-			<div v-if='goodCase'>
-				<h1>「{{ sharedState.funnyCharacters[0] }}」に怒られてしまいました</h1>
-				<h1>理由は「{{ sharedState.funnyReasons[0] }}」でした</h1>
-			</div>
-			<div v-else>
-				<h1>「{{ sharedState.characters[0] }}」に怒られてしまいました</h1>
-				<h1>理由は「{{ sharedState.reasons[0] }}」でした</h1>
+			<div class="fadeIn txt03">
+				<div v-if='goodCase'>
+					<h1>理由は「{{ sharedState.funnyReasons[0] }}」でした</h1>
+				</div>
+				<div v-else>
+					<h1>理由は「{{ sharedState.reasons[0] }}」でした</h1>
+				</div>
 			</div>
 		</div>
 		<div v-else>
-			<h1 class="py-16 my-16">怒られない時が来るといいですね。
-			</h1>
+			<h1 class="py-16 my-16">怒られない時が来るといいですね。</h1>
 		</div>
-		<div class="button mt-8">
+		<div class="button mt-8 fadeIn txt04">
 			<router-link
 				to="/"
 				class="link top"
@@ -115,5 +124,24 @@ export default {
 }
 .card {
 	height: 500px;
+}
+.fadeIn {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+@keyframes fadeIn {
+  100% { opacity: 1; }
+}
+.txt01 {
+  animation-delay: 0s;
+}
+.txt02 {
+  animation-delay: 1s;
+}
+.txt03 {
+  animation-delay: 2s;
+}
+.txt04 {
+  animation-delay: 3s;
 }
 </style>
