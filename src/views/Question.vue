@@ -184,6 +184,41 @@ export default {
 					answer: 'チーク',
 					character: 'サバサバ系',
 					index: 3
+				},
+				{ 
+					image: { 
+						before: 'kamacho.png',
+						after: 'kamacho_af_1.jpeg'
+					},
+					selections: [
+						{
+							choice: '髪色',
+							reason: 'あしらわれているような気がするから'
+						},
+						{
+							choice: 'ファンデーション',
+							reason: '当ててほしいわけじゃないから'
+						},
+						{
+							choice: '眉毛',
+							reason: 'あしらわれているような気がするから'
+						},
+						{ 
+							choice: 'アイシャドウ',
+							reason: 'あしらわれているような気がするから'
+						},
+						{
+							choice: '体調が悪い',
+							reason: 'あしらわれているような気がするから'
+						},
+						{
+							choice: '特になし',
+							reason: 'そんなわけがないから'
+						}
+					],
+					answer: 'ファンデーション',
+					character: 'かまってちゃん',
+					index: 4
 				}
 			]
 		}
