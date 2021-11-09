@@ -47,8 +47,8 @@ export default {
 			questions: [
 				{ 
 					image: { 
-						before: 'sample_1.jpg',
-						after: 'sample_1_after.jpeg'
+						before: 'menhera.jpg',
+						after: 'menhera_af_1.jpeg'
 					},
 					selections: [
 						{
@@ -82,8 +82,8 @@ export default {
 				},
 				{ 
 					image: { 
-						before: 'sample_2.jpg',
-						after: 'sample_2_after.jpeg'
+						before: 'seiso.jpg',
+						after: 'seiso_af_1.jpeg'
 					},
 					selections: [
 						{
@@ -117,8 +117,8 @@ export default {
 				},
 				{ 
 					image: { 
-						before: 'sample_3.jpg',
-						after: 'sample_3_after.jpeg'
+						before: 'haraguro.jpg',
+						after: 'haraguro_af_1.jpeg'
 					},
 					selections: [
 						{
@@ -152,8 +152,8 @@ export default {
 				},
 				{ 
 					image: { 
-						before: 'sample_4.jpg',
-						after: 'sample_4_after.jpeg'
+						before: 'sabasaba.jpg',
+						after: 'sabasaba_af_1.jpeg'
 					},
 					selections: [
 						{
@@ -166,7 +166,7 @@ export default {
 						},
 						{
 							choice: 'チーク',
-							reason: 'ジロジロ見られて君が悪いから'
+							reason: 'ジロジロ見られて気味が悪いから'
 						},
 						{ 
 							choice: 'リップ',
