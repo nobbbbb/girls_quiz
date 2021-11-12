@@ -7,7 +7,7 @@
 		<div v-if=question> 
 			<!-- 問題の画像表示 -->
 			<div class="question-wrapper my-5">
-				<h1>{{ question.charactor }}</h1>
+				<h1>{{ question.character }}</h1>
 				<div class="girls-image">
 						<img :src=question.image.before title="girls-before">
 						<img :src=question.image.after title="girls-after">
@@ -15,7 +15,7 @@
 				<p>変化しているのはどこ？</p>
 			</div>
 		<!-- 回答の選択肢表示 -->
-			<div class="answer-wrapper my-10">
+			<div class="answer-wrapper my-6">
 				<div class="answer-options">
 				<v-btn
 					class="answer-option"
@@ -278,9 +278,12 @@ export default {
 .question-wrapper {
 	text-align: center;
 }
+.question-wrapper h1 {
+	font-weight: bold;
+}
 img {
 	width: 45%;
-	padding: 20px;
+	padding: 0 20px 20px;
 	max-width: 400px;
 	min-width: 250px;
 }
