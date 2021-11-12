@@ -406,6 +406,8 @@ export default {
 		quizData.answers = []
 		quizData.reasons = []
 		quizData.characters = []
+		quizData.funnyReasons = []
+		quizData.funnyCharacters = []
 	}
 }
 
