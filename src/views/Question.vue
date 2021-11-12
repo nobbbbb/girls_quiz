@@ -7,7 +7,7 @@
 		<div v-if=question> 
 			<!-- 問題の画像表示 -->
 			<div class="question-wrapper my-5">
-				<h1>{{ question.charactor }}</h1>
+				<h1>{{ question.character }}</h1>
 				<div class="girls-image">
 						<img :src=question.image.before title="girls-before">
 						<img :src=question.image.after title="girls-after">
@@ -15,7 +15,7 @@
 				<p>変化しているのはどこ？</p>
 			</div>
 		<!-- 回答の選択肢表示 -->
-			<div class="answer-wrapper my-10">
+			<div class="answer-wrapper my-6">
 				<div class="answer-options">
 				<v-btn
 					class="answer-option"
@@ -47,8 +47,8 @@ export default {
 			questions: [
 				{ 
 					image: { 
-						before: 'sample_1.jpg',
-						after: 'sample_1_after.jpeg'
+						before: 'menhera.jpg',
+						after: 'menhera_af_1.jpeg'
 					},
 					selections: [
 						{
@@ -82,8 +82,8 @@ export default {
 				},
 				{ 
 					image: { 
-						before: 'sample_2.jpg',
-						after: 'sample_2_after.jpeg'
+						before: 'seiso.jpg',
+						after: 'seiso_af_1.jpeg'
 					},
 					selections: [
 						{
@@ -117,8 +117,8 @@ export default {
 				},
 				{ 
 					image: { 
-						before: 'sample_3.jpg',
-						after: 'sample_3_after.jpeg'
+						before: 'haraguro.jpg',
+						after: 'haraguro_af_1.jpeg'
 					},
 					selections: [
 						{
@@ -152,8 +152,8 @@ export default {
 				},
 				{ 
 					image: { 
-						before: 'sample_4.jpg',
-						after: 'sample_4_after.jpeg'
+						before: 'sabasaba.jpg',
+						after: 'sabasaba_af_1.jpeg'
 					},
 					selections: [
 						{
@@ -166,7 +166,7 @@ export default {
 						},
 						{
 							choice: 'チーク',
-							reason: 'ジロジロ見られて君が悪いから'
+							reason: 'ジロジロ見られて気味が悪いから'
 						},
 						{ 
 							choice: 'リップ',
@@ -184,6 +184,181 @@ export default {
 					answer: 'チーク',
 					character: 'サバサバ系',
 					index: 3
+				},
+				{ 
+					image: { 
+						before: 'kamacho.png',
+						after: 'kamacho_af_1.jpeg'
+					},
+					selections: [
+						{
+							choice: '髪色',
+							reason: 'あしらわれているような気がするから'
+						},
+						{
+							choice: 'ファンデーション',
+							reason: '当ててほしいわけじゃないから'
+						},
+						{
+							choice: '眉毛',
+							reason: 'あしらわれているような気がするから'
+						},
+						{ 
+							choice: 'アイシャドウ',
+							reason: 'あしらわれているような気がするから'
+						},
+						{
+							choice: '体調が悪い',
+							reason: 'あしらわれているような気がするから'
+						},
+						{
+							choice: '特になし',
+							reason: 'そんなわけがないから'
+						}
+					],
+					answer: 'ファンデーション',
+					character: 'かまってちゃん',
+					index: 4
+				},
+				{ 
+					image: { 
+						before: 'tsundere.jpg',
+						after: 'tsundere_af_1.jpeg'
+					},
+					selections: [
+						{
+							choice: '眉毛',
+							reason: '気付いたからって別に嬉しくないから'
+						},
+						{
+							choice: 'リップ',
+							reason: '適当なこと言う人嫌いだから'
+						},
+						{
+							choice: 'フェイスライン',
+							reason: '適当なこと言う人嫌いだから'
+						},
+						{
+							choice: 'おでこの広さ',
+							reason: 'バカにされてる気がするから'
+						},
+						{
+							choice: 'カラコン',
+							reason: '適当なこと言う人嫌いだから'
+						},
+						{ 
+							choice: '特になし',
+							reason: '特にないなら言わなくていいから'
+						}
+					],
+					answer: '眉毛',
+					character: 'ツンデレ',
+					index: 5
+				},
+				{ 
+					image: { 
+						before: 'azatoi.jpg',
+						after: 'azatoi_af_1.jpeg'
+					},
+					selections: [
+						{
+							choice: 'アイシャドウ',
+							reason: 'トンチンカンなこと言っているから'
+						},
+						{
+							choice: '鼻筋',
+							reason: 'トンチンカンなこと言っているから'
+						},
+						{
+							choice: '髪のツヤ',
+							reason: 'トンチンカンなこと言っているから'
+						},
+						{
+							choice: 'リップ',
+							reason: 'もっと上手に褒めて欲しいから'
+						},
+						{
+							choice: '香水',
+							reason: '画像で匂いがわかるわけないから'
+						},
+						{ 
+							choice: '特になし',
+							reason: 'トンチンカンなこと言っているから'
+						}
+					],
+					answer: 'リップ',
+					character: 'あざとい系',
+					index: 6
+				},
+				{ 
+					image: { 
+						before: 'otona.jpg',
+						after: 'otona_af_1.jpeg'
+					},
+					selections: [
+						{
+							choice: '髪の長さ',
+							reason: '気遣ってるのが見え見えだから'
+						},
+						{
+							choice: 'アイシャドウ',
+							reason: '笑われた気がしたから'
+						},
+						{
+							choice: 'ファンデーション',
+							reason: '気遣ってるのが見え見えだから'
+						},
+						{
+							choice: 'シワの数',
+							reason: '冗談でも面白くないから'
+						},
+						{
+							choice: 'リップ',
+							reason: '気遣ってるのが見え見えだから'
+						},
+						{ 
+							choice: '特になし',
+							reason: '気遣ってるのが見え見えだから'
+						}
+					],
+					answer: 'アイシャドウ',
+					character: '大人系',
+					index: 7
+				},
+				{ 
+					image: { 
+						before: 'otona.jpg',
+						after: 'otona_af_3.jpeg'
+					},
+					selections: [
+						{
+							choice: '髪色',
+							reason: '嬉しくて照れちゃうから'
+						},
+						{
+							choice: '前髪',
+							reason: '前髪ないから'
+						},
+						{
+							choice: 'ファンデーション',
+							reason: '気づくことを密かに期待してたから'
+						},
+						{
+							choice: '年齢',
+							reason: 'デリカシーがないから'
+						},
+						{
+							choice: '眉毛',
+							reason: '気づくことを密かに期待してたから'
+						},
+						{ 
+							choice: '特になし',
+							reason: '気づくことを密かに期待してたから'
+						}
+					],
+					answer: '髪色',
+					character: '大人系',
+					index: 8
 				}
 			]
 		}
@@ -202,7 +377,7 @@ export default {
 			}
 		},
 		changeQuestion: function() {
-			this.question = this.questions[this.question.index++]
+			this.question = this.shuffle(this.questions)[0]
 			return this.question
 		},
 		judgeAnswer: function(key) {
@@ -231,6 +406,8 @@ export default {
 		quizData.answers = []
 		quizData.reasons = []
 		quizData.characters = []
+		quizData.funnyReasons = []
+		quizData.funnyCharacters = []
 	}
 }
 
@@ -243,9 +420,12 @@ export default {
 .question-wrapper {
 	text-align: center;
 }
+.question-wrapper h1 {
+	font-weight: bold;
+}
 img {
 	width: 45%;
-	padding: 20px;
+	padding: 0 20px 20px;
 	max-width: 400px;
 	min-width: 250px;
 }
