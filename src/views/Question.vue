@@ -219,6 +219,146 @@ export default {
 					answer: 'ファンデーション',
 					character: 'かまってちゃん',
 					index: 4
+				},
+				{ 
+					image: { 
+						before: 'tsundere.jpg',
+						after: 'tsundere_af_1.jpeg'
+					},
+					selections: [
+						{
+							choice: '眉毛',
+							reason: '気付いたからって別に嬉しくないから'
+						},
+						{
+							choice: 'リップ',
+							reason: '適当なこと言う人嫌いだから'
+						},
+						{
+							choice: 'フェイスライン',
+							reason: '適当なこと言う人嫌いだから'
+						},
+						{
+							choice: 'おでこの広さ',
+							reason: 'バカにされてる気がするから'
+						},
+						{
+							choice: 'カラコン',
+							reason: '適当なこと言う人嫌いだから'
+						},
+						{ 
+							choice: '特になし',
+							reason: '特にないなら言わなくていいから'
+						}
+					],
+					answer: '眉毛',
+					character: 'ツンデレ',
+					index: 5
+				},
+				{ 
+					image: { 
+						before: 'azatoi.jpg',
+						after: 'azatoi_af_1.jpeg'
+					},
+					selections: [
+						{
+							choice: 'アイシャドウ',
+							reason: 'トンチンカンなこと言っているから'
+						},
+						{
+							choice: '鼻筋',
+							reason: 'トンチンカンなこと言っているから'
+						},
+						{
+							choice: '髪のツヤ',
+							reason: 'トンチンカンなこと言っているから'
+						},
+						{
+							choice: 'リップ',
+							reason: 'もっと上手に褒めて欲しいから'
+						},
+						{
+							choice: '香水',
+							reason: '画像で匂いがわかるわけないから'
+						},
+						{ 
+							choice: '特になし',
+							reason: 'トンチンカンなこと言っているから'
+						}
+					],
+					answer: 'リップ',
+					character: 'あざとい系',
+					index: 6
+				},
+				{ 
+					image: { 
+						before: 'otona.jpg',
+						after: 'otona_af_1.jpeg'
+					},
+					selections: [
+						{
+							choice: '髪の長さ',
+							reason: '気遣ってるのが見え見えだから'
+						},
+						{
+							choice: 'アイシャドウ',
+							reason: '笑われた気がしたから'
+						},
+						{
+							choice: 'ファンデーション',
+							reason: '気遣ってるのが見え見えだから'
+						},
+						{
+							choice: 'シワの数',
+							reason: '冗談でも面白くないから'
+						},
+						{
+							choice: 'リップ',
+							reason: '気遣ってるのが見え見えだから'
+						},
+						{ 
+							choice: '特になし',
+							reason: '気遣ってるのが見え見えだから'
+						}
+					],
+					answer: 'アイシャドウ',
+					character: '大人系',
+					index: 7
+				},
+				{ 
+					image: { 
+						before: 'otona.jpg',
+						after: 'otona_af_3.jpeg'
+					},
+					selections: [
+						{
+							choice: '髪色',
+							reason: '嬉しくて照れちゃうから'
+						},
+						{
+							choice: '前髪',
+							reason: '前髪ないから'
+						},
+						{
+							choice: 'ファンデーション',
+							reason: '気づくことを密かに期待してたから'
+						},
+						{
+							choice: '年齢',
+							reason: 'デリカシーがないから'
+						},
+						{
+							choice: '眉毛',
+							reason: '気づくことを密かに期待してたから'
+						},
+						{ 
+							choice: '特になし',
+							reason: '気づくことを密かに期待してたから'
+						}
+					],
+					answer: '髪色',
+					character: '大人系',
+					index: 8
 				}
 			]
 		}
