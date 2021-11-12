@@ -237,7 +237,7 @@ export default {
 			}
 		},
 		changeQuestion: function() {
-			this.question = this.questions[this.question.index++]
+			this.question = this.shuffle(this.questions)[0]
 			return this.question
 		},
 		judgeAnswer: function(key) {
