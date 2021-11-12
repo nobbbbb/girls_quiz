@@ -122,9 +122,6 @@ export default {
 	text-decoration: none;
 	margin-right: 30px;
 }
-.card {
-	height: 500px;
-}
 .fadeIn {
   opacity: 0;
   animation: fadeIn 1s ease forwards;
